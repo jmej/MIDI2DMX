@@ -46,3 +46,6 @@ Finally DMX_audio_analysis.pd demonstrates pitch and amplitude tracking and tran
 
 ##HARDWARE MIDI:
 The hardware midi part of this board is untested - and the code doesn't support it yet. But it probably works, it just needs some arduino code to handle midi input on the Teensy's second Serial RX line.
+
+###FUTURE DEV:
+Aside from implementing hardware midi - my plan is to setup some color and envelope control on the Teensy to replace some of work I'm currently doing with PD. 
