@@ -2,9 +2,9 @@
 
 ##Teensy driven DJ light and LED control via MIDI
 
-###These tools were developed to facilitate curriculum at Portland Community College for the Music and Sonic Arts department
+###This project was developed to facilitate curriculum at Portland Community College for the Music and Sonic Arts department
 
-This is an easy way to get total control over a wide variety of lights - using existing music software (ableton live, logic, bitwig, garage band, pro tools etc). It also allows for easy interfacing with programming environments like Pure Data, MaxMSP, Processing etc).
+It provides an easy way to get total control over a wide variety of lights - using existing music software (ableton live, logic, bitwig, garage band, pro tools etc). It also allows for easy interfacing with programming environments like Pure Data, MaxMSP, Processing etc).
 
 This makes it easy to sequencing lights for live music performances, do algorithmic light programming, map lights using sound analysis, data from the internet, or sensor data etc.
 
