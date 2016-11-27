@@ -31,7 +31,7 @@ There are a lot of expensive DMX controllers with proprietary drivers. There are
 The uDMX project http://www.anyma.ch/research/udmx/ is the only well documented open source option out there, but in my experience - it's not that good. It suffers from choppy framerates and frequent drop outs, and on top of that, all the units I tried became unresponsive fairly often in a variety of software applications. There is a fundamental design flaw: it relies on your computer to send DMX frames. If your computer is processing audio (from Pure Data or Max for instance) - you end up with pretty severe audio dropouts. Also your framerate suffers due to various computer and USB bus performance issues. By contrast - this code makes the Teensy handle sending all the DMX frames, it just keeps the current channel values in an array that gets updated as midi data gets sent. So only value changes get transmitted via USB and the Teensy does the work of sending continual, fast frames whether they get updated or not. There is no pause in the Arduino loop - it sends out frames as fast as it can resulting in super smooth curves and animations.
 
 
-##PD STUFF:
+##PD:
 In the PD folder you'll find a few example patches for Pure Data (http://puredata.info/). While you can control lights using this board from anything that can send midi - PD offers a lot more options and flexibility than most other midi software. I run patches like these on a Raspberry Pi for live use.
 
 DMX_color_presets.pd shows how to translate RGB and HSV color values into messages you can send to your lights. Google has a nice color picker tool. https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=color%20picker
@@ -44,10 +44,10 @@ This makes any DMX light playable from a midi keyboard or midi sequencer like Ab
 
 Finally DMX_audio_analysis.pd demonstrates pitch and amplitude tracking and translation into light color and intensity using pd.
 
-##HARDWARE MIDI:
+##Hardware Midi:
 The hardware midi part of this board is untested - and the code doesn't support it yet. But it probably works, it just needs some arduino code to handle midi input on the Teensy's second Serial RX line.
 
-##FUTURE DEV:
+##Future Dev:
 Aside from implementing hardware midi - the plan is to setup some color and envelope control on the Teensy to replace some of work I'm currently doing with PD. An enclosure is also in progress.
 
 ##Schematic Errata:
