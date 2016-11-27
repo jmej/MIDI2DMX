@@ -32,7 +32,7 @@ The uDMX project http://www.anyma.ch/research/udmx/ is the only well documented 
 
 
 ##PD STUFF:
-In the PD folder you'll find a few example patches. While you can control lights using this board from anything that can send midi - PD offers a lot more options and flexibility. I run these patches on a Raspberry Pi for live use.
+In the PD folder you'll find a few example patches for Pure Data (http://puredata.info/). While you can control lights using this board from anything that can send midi - PD offers a lot more options and flexibility than most other midi software. I run patches like these on a Raspberry Pi for live use.
 
 DMX_color_presets.pd shows how to translate RGB and HSV color values into messages you can send to your lights. Google has a nice color picker tool. https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=color%20picker
 
