@@ -16,7 +16,7 @@ Eagle files for the PCB are published here - but you can also order them (in mul
 
 This core of the design is a Teensy - with some solid and extremely fast DMX code from Paul Stoffregen. The result is much smoother and more reliable than any commercial solution I've used. Because of Paul's usb drivers - it can be programmed to be a USB midi device, so it will show up in any MIDI capable software on any OS. The code in this repo is setup to translate midi cc's into DMX channel values. (Mapping CC numbers directly to DMX channel numbers).
 
-We've used the Teensy 3.2 - an LC should also work though) https://www.pjrc.com/store/teensy32.html
+We've used the Teensy 3.2 for our builds - but an LC should also work though https://www.pjrc.com/store/teensy32.html
 
 The additional parts are available from mouser here: http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=11855f0a7f
 
