@@ -4,7 +4,7 @@
 
 ###This project was developed to facilitate curriculum at Portland Community College for the Music and Sonic Arts department
 
-It provides an easy way to get total control over a wide variety of lights - using existing music software (ableton live, logic, bitwig, garage band, pro tools etc), as well as hardware midi sequencers like the Akai MPC series, the Elektron Octatrack, Alesis MMT-8, etc. It allows for easy interfacing with programming environments like Pure Data, MaxMSP, and Processing.
+It provides an easy way to get total control over a wide variety of lights - using existing music software (Ableton Live, Logic, Bitwig, Garage Band, Pro Tools etc), as well as hardware midi sequencers like the Akai MPC series, the Elektron Octatrack, Alesis MMT-8, etc. It allows for easy interfacing with programming environments like Pure Data, MaxMSP, and Processing.
 
 This makes it easy to sequencing lights for live music performances, do algorithmic light programming, map lights using sound analysis, data from the internet, or sensor data etc.
 
@@ -38,11 +38,11 @@ DMX_color_presets.pd shows how to translate RGB and HSV color values into messag
 
 hsv2rbg.pd is an abstraction that the other patches rely on. All of these pd patches need to be put in the same folder to work correctly.
 
-DMX_color_organ.pd has a simple midi mapping using Scriabin's pitch-color associations. (https://en.wikipedia.org/wiki/Clavier_%C3%A0_lumi%C3%A8res)
+DMX_color_organ.pd has a simple midi mapping using Scriabin's pitch-color associations. https://en.wikipedia.org/wiki/Clavier_%C3%A0_lumi%C3%A8res
 
 This makes any DMX light playable from a midi keyboard or midi sequencer like Ableton Live, Logic, Bitwig - as well as hardware sequencers like MPCs and Octatracks. This is my preferred method for programming custom light shows for live PA's.
 
-Finally DMX_audio_analysis.pd demonstrates pitch and amplitude tracking and translation into light color and intensity using pd. You need to make sure you have an audio input setup in PD (Media -> Audio Settings) - although the built-in mic on your laptop should work just fine.
+Finally DMX_audio_analysis.pd demonstrates pitch and amplitude tracking and translation into light color and intensity using pd.
 
 ##HARDWARE MIDI:
 The hardware midi part of this board is untested - and the code doesn't support it yet. But it probably works, it just needs some arduino code to handle midi input on the Teensy's second Serial RX line.
