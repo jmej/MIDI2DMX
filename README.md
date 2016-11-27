@@ -1,8 +1,8 @@
 # MIDI2DMX
 
-#Control DJ lights and LEDs from any software or hardware that can transmit MIDI
+##Control DJ lights and LEDs from any software or hardware that can transmit MIDI
 
-#This project came out of research associated with my work at Portland Community College as an Audio Programming Instructor in the Music and Sonic Arts department.
+##This project came out of research associated with my work at Portland Community College as an Audio Programming Instructor in the Music and Sonic Arts department.
 
 This is an easy way to get total control over a wide variety of lights - using existing music software (ableton live, logic, bitwig, garage band, pro tools etc). It also allows for easy interfacing with programming environments like Pure Data, MaxMSP, Processing etc).
 
