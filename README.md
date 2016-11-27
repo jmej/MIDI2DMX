@@ -49,3 +49,6 @@ The hardware midi part of this board is untested - and the code doesn't support 
 
 ###FUTURE DEV:
 Aside from implementing hardware midi - my plan is to setup some color and envelope control on the Teensy to replace some of work I'm currently doing with PD. 
+
+###Schematic Errata:
+Even though the schematic shows a PC110 optocoupler - it is actually wired and laid out for a Sharp PC900V optocoupler. The schmetic is correct - as long as you use a PC900V and not a PC110. It would need to be changed for a different optocoupler.
