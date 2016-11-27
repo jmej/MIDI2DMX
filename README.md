@@ -10,7 +10,7 @@ This makes it easy to sequencing lights for live music performances, do algorith
 
 It unlocks cheap DJ lights turning them into flexible and expressive tools/instruments.
 
-I designed a PCB to make the circuit easy to build, and have assembled quite a number of them with some of students in my interactivity courses at Portland Community College. There is no wiring, it's a quick project and costs around $40 total.
+I designed a PCB to make the circuit easy to build, and have assembled quite a number of them with students in my interactivity courses at Portland Community College. There is no wiring, it's a quick project and costs around $40 total.
 
 Eagle files for the PCB are published here - but you can also order them (in multiples of 3) from OSHPark: https://oshpark.com/shared_projects/hyqqaC5r
 
