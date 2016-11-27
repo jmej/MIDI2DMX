@@ -14,7 +14,7 @@ I designed a PCB to make the circuit easy to build, and have assembled quite a n
 
 Eagle files for the PCB are published here - but you can also order them (in multiples of 3) from OSHPark: https://oshpark.com/shared_projects/hyqqaC5r
 
-This core of the PCB is a Teensy - with some solid and extremely fast DMX code from Paul Stoffregen. The result is much smoother and more reliable than any commercial solution I've used. In turn, it's programmed to be a USB midi device, and is setup to translate midi cc's into DMX channel values. (Mapping CC numbers directly to DMX channel numbers).
+This core of the design is a Teensy - with some solid and extremely fast DMX code from Paul Stoffregen. The result is much smoother and more reliable than any commercial solution I've used. Because of Paul's usb drivers - it can be programmed to be a USB midi device, so it will show up in any MIDI capable software on any OS. The code in this repo is setup to translate midi cc's into DMX channel values. (Mapping CC numbers directly to DMX channel numbers).
 
 We've used the Teensy 3.2 - an LC should also work though) https://www.pjrc.com/store/teensy32.html
 
@@ -48,7 +48,7 @@ Finally DMX_audio_analysis.pd demonstrates pitch and amplitude tracking and tran
 The hardware midi part of this board is untested - and the code doesn't support it yet. But it probably works, it just needs some arduino code to handle midi input on the Teensy's second Serial RX line.
 
 ###FUTURE DEV:
-Aside from implementing hardware midi - my plan is to setup some color and envelope control on the Teensy to replace some of work I'm currently doing with PD. 
+Aside from implementing hardware midi - the plan is to setup some color and envelope control on the Teensy to replace some of work I'm currently doing with PD. An enclosure is also in progress.
 
 ###Schematic Errata:
 Even though the schematic shows a PC110 optocoupler - it is actually wired and laid out for a Sharp PC900V optocoupler. The schmetic is correct - as long as you use a PC900V and not a PC110. It would need to be changed for a different optocoupler.
