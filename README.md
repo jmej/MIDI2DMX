@@ -2,7 +2,7 @@
 
 ##Control DJ lights and LEDs from any software or hardware that can transmit MIDI
 
-##This project came out of research associated with my work at Portland Community College as an Audio Programming Instructor in the Music and Sonic Arts department.
+###This project came out of research associated with my work at Portland Community College as an Audio Programming Instructor in the Music and Sonic Arts department.
 
 Eagle files for the PCB are published here - but you can also order them from OSHPark: https://oshpark.com/shared_projects/hyqqaC5r
 
@@ -31,7 +31,7 @@ The Teensy is programmed to be a USB midi device, and is setup to translate midi
 I designed this PCB to make the circuit easy to build, and have assembled quite a number of them with some of students in my interactivity courses at Portland Community College.
 
 ##PD STUFF:
-In the PD folder you'll find a few example patches.
+In the PD folder you'll find a few example patches. While you can control lights using this board from anything that can send midi - PD offers a lot more options and flexibility. I run these patches on a Raspberry Pi for live use.
 
 DMX_color_presets.pd shows how to translate RGB and HSV color values into messages you can send to your lights. Google has a nice color picker tool.
 
@@ -43,3 +43,5 @@ This makes any DMX light playable from a midi keyboard or midi sequencer like Ab
 
 Finally DMX_audio_analysis.pd demonstrates pitch and amplitude tracking and translation into light color and intensity using pd. You need to make sure you have an audio input setup in PD (Media -> Audio Settings) - although the built-in mic on your laptop should work just fine.
 
+##HARDWARE MIDI:
+The hardware midi part of this board is untested - and the code doesn't support it yet. But it probably works, it just needs some arduino code to handle midi input on the Teensy's second Serial RX line.
