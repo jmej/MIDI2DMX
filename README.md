@@ -28,7 +28,7 @@ It turns out that it's pretty hard to find a good, well supported, inexpensive D
 
 There are a lot of expensive DMX controllers with proprietary drivers. There are a lot of cheap DMX controllers with little or no documentation. (Although these days a lot of them are copied from the uDMX project). Some of them work intermittently, some work only on windows, and some work only with specific (unexciting) DMX control software.
 
-The uDMX project http://www.anyma.ch/research/udmx/ is the only well documented open source option out there, but in my experience - it's not that good. It suffers from choppy framerates and frequent drop outs, and on top of that, all the units I tried became unresponsive fairly often in a variety of software applications. There is a fundamental design flaw: it relies on your computer to send DMX frames. If your computer is processing audio (from Pure Data or Max for instance) - you end up with pretty severe audio dropouts. Also your framerate suffers due to varies computer and USB bus performance issues.
+The uDMX project http://www.anyma.ch/research/udmx/ is the only well documented open source option out there, but in my experience - it's not that good. It suffers from choppy framerates and frequent drop outs, and on top of that, all the units I tried became unresponsive fairly often in a variety of software applications. There is a fundamental design flaw: it relies on your computer to send DMX frames. If your computer is processing audio (from Pure Data or Max for instance) - you end up with pretty severe audio dropouts. Also your framerate suffers due to various computer and USB bus performance issues.
 
 
 ##PD STUFF:
