@@ -1,6 +1,6 @@
 # MIDI2DMX
 
-##Teensy driven DJ light and LED control from any software or hardware that can transmit MIDI
+##Teensy driven DJ light and LED control via MIDI
 
 ###This project came out of research for Portland Community College - Music and Sonic Arts.
 
