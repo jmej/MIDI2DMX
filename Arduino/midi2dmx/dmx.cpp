@@ -36,7 +36,7 @@ void leds_update()
     state = 2;
     break;
   case 2: // transmit data
-    avail = Serial2.availableForWrite();
+    avail = Serial1.availableForWrite();
     if (avail == 0) return;
     num = CHANNELS - chindex;
     if (num > avail) num = avail;
