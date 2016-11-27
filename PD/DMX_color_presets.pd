@@ -1,0 +1,98 @@
+#N canvas 335 61 1128 844 10;
+#X obj 113 443 vsl 15 128 0 127 0 0 empty empty R 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 192 443 vsl 15 128 0 127 0 0 empty empty G 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 270 443 vsl 15 128 0 127 0 0 empty empty B 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 359 445 vsl 15 128 0 127 0 0 empty empty Intensity 0 -9 0 10
+-262144 -1 -1 0 1;
+#X obj 292 754 ctlout;
+#X msg 113 579 \$1 1;
+#X msg 359 581 \$1 7;
+#X msg 192 580 \$1 2;
+#X msg 270 579 \$1 3;
+#X obj 113 332 unpack f f f;
+#X obj 113 364 / 2;
+#X obj 147 365 / 2;
+#X obj 182 365 / 2;
+#X text 210 361 divide value by 2 to scale to midi range (0-127);
+#X floatatom 76 581 5 0 0 0 - - -, f 5;
+#X floatatom 155 581 5 0 0 0 - - -, f 5;
+#X floatatom 233 581 5 0 0 0 - - -, f 5;
+#X text 193 332 unpacks a list into 3 numbers;
+#X msg 131 283 35 190 220;
+#X obj 670 384 line;
+#X obj 670 269 bng 35 250 50 0 empty empty click_to_trigger_light 0
+-15 0 20 -4034 -1 -1;
+#X text 739 352 generates an envelope for the light;
+#X msg 114 256 255 200 50;
+#X msg 80 205 255 0 128;
+#X text 178 239 edit these messages or make more for new color presets
+;
+#X msg 96 230 53 48 76;
+#X text 69 168 click on these to change the light color preset - then
+click the big green button;
+#X obj 593 672 hsv2rgb;
+#X obj 596 569 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 643 674 scales from HSV colorspace to RGB;
+#X obj 612 591 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 754 586 and saturation amount here;
+#X obj 593 645 pack f f 1;
+#X obj 609 614 t b f;
+#X obj 593 700 send rgb_from_hsv;
+#X obj 138 307 receive rgb_from_hsv;
+#X text 604 539 alternative HSV color picker;
+#X text 740 564 select a Hue here;
+#X text 708 702 sends RGB values to the RGB controls;
+#X obj 619 222 r retrigger;
+#X obj 874 283 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 956 283 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 875 314 127 500;
+#X msg 956 313 0 500;
+#X text 892 282 100% on;
+#X text 979 282 0$ on;
+#X msg 670 353 127 \, 0 500;
+#X text 628 412 jumps to full intensity (127) and ramps down to 0 over
+500 ms;
+#X text 333 34 example patch for MIDI2DMX;
+#X connect 0 0 5 0;
+#X connect 0 0 14 0;
+#X connect 1 0 7 0;
+#X connect 1 0 15 0;
+#X connect 2 0 8 0;
+#X connect 2 0 16 0;
+#X connect 3 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 9 1 11 0;
+#X connect 9 2 12 0;
+#X connect 10 0 0 0;
+#X connect 11 0 1 0;
+#X connect 12 0 2 0;
+#X connect 18 0 9 0;
+#X connect 19 0 3 0;
+#X connect 20 0 46 0;
+#X connect 22 0 9 0;
+#X connect 23 0 9 0;
+#X connect 25 0 9 0;
+#X connect 27 0 34 0;
+#X connect 28 0 32 0;
+#X connect 30 0 33 0;
+#X connect 32 0 27 0;
+#X connect 33 0 28 0;
+#X connect 33 1 32 1;
+#X connect 35 0 9 0;
+#X connect 39 0 20 0;
+#X connect 40 0 42 0;
+#X connect 41 0 43 0;
+#X connect 42 0 19 0;
+#X connect 43 0 19 0;
+#X connect 46 0 19 0;

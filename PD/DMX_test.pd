@@ -1,0 +1,46 @@
+#N canvas 94 126 862 642 10;
+#X obj 50 94 vsl 15 128 0 127 0 0 empty empty R 0 -9 0 10 -262144 -1
+-1 10100 1;
+#X obj 129 94 vsl 15 128 0 127 0 0 empty empty G 0 -9 0 10 -262144
+-1 -1 6400 1;
+#X obj 207 94 vsl 15 128 0 127 0 0 empty empty B 0 -9 0 10 -262144
+-1 -1 10700 1;
+#X obj 296 96 vsl 15 128 0 127 0 0 empty empty Intensity 0 -9 0 10
+-262144 -1 -1 12700 1;
+#X obj 229 405 ctlout;
+#X msg 50 230 \$1 1;
+#X msg 296 232 \$1 7;
+#X msg 129 231 \$1 2;
+#X msg 207 230 \$1 3;
+#X msg 50 -60 35 24 128;
+#X obj 50 -17 unpack f f f;
+#X obj 50 15 / 2;
+#X obj 84 16 / 2;
+#X obj 119 16 / 2;
+#X text 147 12 divide value by 2 to scale to midi range (0-127);
+#X floatatom 13 232 5 0 0 0 - - -, f 5;
+#X floatatom 92 232 5 0 0 0 - - -, f 5;
+#X floatatom 170 232 5 0 0 0 - - -, f 5;
+#X obj 295 34 loadbang;
+#X msg 295 59 127;
+#X text 335 57 turns intensity up when patch opens;
+#X connect 0 0 5 0;
+#X connect 0 0 15 0;
+#X connect 1 0 7 0;
+#X connect 1 0 16 0;
+#X connect 2 0 8 0;
+#X connect 2 0 17 0;
+#X connect 3 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 10 2 13 0;
+#X connect 11 0 0 0;
+#X connect 12 0 1 0;
+#X connect 13 0 2 0;
+#X connect 18 0 19 0;
+#X connect 19 0 3 0;
