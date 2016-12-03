@@ -4,7 +4,7 @@
 
 ###This project was developed to facilitate curriculum at Portland Community College for the Music and Sonic Arts department
 
-It provides an simple way to get total control over a wide variety of lights - using existing music software (Ableton Live, Logic, Bitwig, Garage Band, Pro Tools etc), as well as hardware midi sequencers like the Akai MPC series, the Elektron Octatrack, Alesis MMT-8, etc. It allows for easy interfacing with programming environments like Pure Data, MaxMSP, and Processing.
+MIDI2DMX provides a simple way to get total control over a wide variety of lights - using existing music software (Ableton Live, Logic, Bitwig, Garage Band, Pro Tools etc), as well as hardware midi sequencers like the Akai MPC series, the Elektron Octatrack, Alesis MMT-8, etc. It allows for easy interfacing with programming environments like Pure Data, MaxMSP, and Processing.
 
 This makes it easy to sequence lights for live music performances, do algorithmic light programming, map lights using sound analysis, data from the internet, or sensor data etc.
 
