@@ -13,8 +13,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 12500 10900 0    86   ~ 0
-Designed by Jesse Mej~a for PCC Music and Sonic Arts Fall 2016\nReleased under the Creative Commons Attribution ShareAlike License\nhttps://creativecommons.org/licenses/
+Text Notes 12500 10900 0    63   ~ 0
+Designed by Jesse Mejía for PCC Music and Sonic Arts Fall 2016\nReleased under the Creative Commons Attribution ShareAlike License\nhttps://creativecommons.org/licenses/
 $Comp
 L midi2dmx:C-US025-024X044 C1
 U 1 1 5C87EE62
@@ -62,12 +62,12 @@ $EndComp
 $Comp
 L midi2dmx:FRAME_A_L #FRAME1
 U 2 1 5C87F0BA
-P 12400 11900
-F 0 "#FRAME1" H 12450 12350 100 0000 L BNN
-F 1 "Document Number:" H 12450 12350 100 0000 L BNN
-F 2 "" H 12400 11900 60  0001 C CNN
-F 3 "" H 12400 11900 60  0001 C CNN
-	2    12400 11900
+P 12450 11900
+F 0 "#FRAME1" H 12500 12350 100 0000 L BNN
+F 1 "Document Number:" H 12600 11450 100 0000 L BNN
+F 2 "" H 12450 11900 60  0001 C CNN
+F 3 "" H 12450 11900 60  0001 C CNN
+	2    12450 11900
 	1    0    0    -1  
 $EndComp
 $Comp
