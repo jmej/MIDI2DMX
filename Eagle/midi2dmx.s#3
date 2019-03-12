@@ -139,6 +139,8 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
+<description>Designed by Jesse Mejia for PCC
+Fall 2016</description>
 <libraries>
 <library name="Teensy_3_and_LC_Series_Boards_v1.4">
 <packages>

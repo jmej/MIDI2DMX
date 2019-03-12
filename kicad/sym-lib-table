@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name midi2dmx)(type Legacy)(uri ${KIPRJMOD}/midi2dmx.lib)(options "")(descr ""))
+)

@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="mic" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -53,6 +53,8 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="no" active="no"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -1546,6 +1548,14 @@ Audio, scart, microphone, headphone&lt;p&gt;
 </package>
 </packages>
 </library>
+<library name="vpad">
+<description>TemporyVPADlib</description>
+<packages>
+<package name="VPAC0">
+<pad name="VP" x="0" y="0" drill="3.2" diameter="4.216" shape="square"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1780,6 +1790,10 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="OC_NEWARK" value="unknown" x="34.29" y="72.39" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="39.37" y="72.39" size="1.778" layer="27" ratio="10" rot="R180"/>
 </element>
+<element name="VP_0" library="vpad" package="VPAC0" value="VPDEV0" x="2.54" y="-10.16" smashed="yes"/>
+<element name="VP_1" library="vpad" package="VPAC0" value="VPDEV0" x="2.54" y="-15.24" smashed="yes"/>
+<element name="VP_2" library="vpad" package="VPAC0" value="VPDEV0" x="2.54" y="-20.32" smashed="yes"/>
+<element name="VP_3" library="vpad" package="VPAC0" value="VPDEV0" x="2.54" y="-25.4" smashed="yes"/>
 </elements>
 <signals>
 <signal name="AGND">
@@ -1930,15 +1944,23 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="N$12">
 <via x="48.26" y="2.54" extent="1-16" drill="3.2" shape="square"/>
+<contactref element="VP_2" pad="VP"/>
+<wire x1="2.54" y1="-20.32" x2="48.26" y2="2.54" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$13">
 <via x="2.54" y="2.54" extent="1-16" drill="3.2" shape="square"/>
+<contactref element="VP_3" pad="VP"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <via x="2.54" y="77.47" extent="1-16" drill="3.2" shape="square"/>
+<contactref element="VP_0" pad="VP"/>
+<wire x1="2.54" y1="-10.16" x2="2.54" y2="77.47" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
 <via x="48.26" y="77.47" extent="1-16" drill="3.2" shape="square"/>
+<contactref element="VP_1" pad="VP"/>
+<wire x1="2.54" y1="-15.24" x2="48.26" y2="77.47" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="R1" pad="2"/>

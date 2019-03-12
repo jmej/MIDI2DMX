@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="mic" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -52,6 +53,8 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -10211,6 +10214,37 @@ Audio, scart, microphone, headphone&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="vpad">
+<description>TemporyVPADlib</description>
+<packages>
+<package name="VPAC0">
+<pad name="VP" x="0" y="0" drill="3.2" diameter="4.216" shape="square"/>
+</package>
+</packages>
+<symbols>
+<symbol name="VPAD">
+<pin name="VP" x="0" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VPDEV0" prefix="VP">
+<description>VIAPAD</description>
+<gates>
+<gate name="G$1" symbol="VPAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="VPAC0">
+<connects>
+<connect gate="G$1" pin="VP" pad="VP"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -10241,6 +10275,10 @@ Audio, scart, microphone, headphone&lt;p&gt;
 <part name="R2" library="rcl" deviceset="R-US_" device="0309/12" value="270"/>
 <part name="X2" library="con-hirschmann" deviceset="MAB5SH" device=""/>
 <part name="FRAME1" library="frames" deviceset="FRAME_A_L" device=""/>
+<part name="VP_0" library="vpad" deviceset="VPDEV0" device=""/>
+<part name="VP_1" library="vpad" deviceset="VPDEV0" device=""/>
+<part name="VP_2" library="vpad" deviceset="VPDEV0" device=""/>
+<part name="VP_3" library="vpad" deviceset="VPDEV0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10250,27 +10288,83 @@ Released under the Creative Commons Attribution ShareAlike License
 https://creativecommons.org/licenses/</text>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="17.78" y="0"/>
-<instance part="U$2" gate="G$1" x="-7.62" y="50.8"/>
-<instance part="GND2" gate="1" x="20.32" y="45.72"/>
-<instance part="P+1" gate="VCC" x="-40.64" y="66.04"/>
-<instance part="P+2" gate="VCC" x="45.72" y="40.64"/>
-<instance part="GND3" gate="1" x="45.72" y="17.78"/>
-<instance part="P+3" gate="VCC" x="7.62" y="66.04"/>
-<instance part="C1" gate="G$1" x="15.24" y="58.42" rot="R90"/>
-<instance part="X1" gate="G$1" x="55.88" y="53.34"/>
-<instance part="GND1" gate="1" x="33.02" y="45.72"/>
-<instance part="OK1" gate="A" x="-43.18" y="7.62"/>
-<instance part="R1" gate="G$1" x="-66.04" y="12.7"/>
-<instance part="D1" gate="G$1" x="-58.42" y="5.08" rot="R90"/>
-<instance part="C2" gate="G$1" x="-33.02" y="17.78"/>
-<instance part="GND4" gate="1" x="-33.02" y="-22.86"/>
-<instance part="P+4" gate="VCC" x="-27.94" y="30.48"/>
-<instance part="P+5" gate="VCC" x="-17.78" y="17.78"/>
-<instance part="R2" gate="G$1" x="-17.78" y="7.62" rot="R90"/>
-<instance part="X2" gate="G$1" x="-81.28" y="-7.62" rot="R90"/>
-<instance part="FRAME1" gate="G$1" x="-137.16" y="-86.36"/>
-<instance part="FRAME1" gate="G$2" x="35.56" y="-86.36"/>
+<instance part="U$1" gate="G$1" x="17.78" y="0" smashed="yes">
+<attribute name="NAME" x="12.192" y="34.29" size="1.27" layer="95" font="vector" ratio="15"/>
+<attribute name="VALUE" x="14.986" y="-38.1" size="1.27" layer="96" font="vector" ratio="15"/>
+</instance>
+<instance part="U$2" gate="G$1" x="-7.62" y="50.8" smashed="yes">
+<attribute name="NAME" x="-17.78" y="58.42" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-17.78" y="43.18" size="1.778" layer="96"/>
+</instance>
+<instance part="GND2" gate="1" x="20.32" y="45.72" smashed="yes">
+<attribute name="VALUE" x="17.78" y="43.18" size="1.778" layer="96"/>
+</instance>
+<instance part="P+1" gate="VCC" x="-40.64" y="66.04" smashed="yes">
+<attribute name="VALUE" x="-43.18" y="63.5" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P+2" gate="VCC" x="45.72" y="40.64" smashed="yes">
+<attribute name="VALUE" x="43.18" y="38.1" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND3" gate="1" x="45.72" y="17.78" smashed="yes">
+<attribute name="VALUE" x="43.18" y="15.24" size="1.778" layer="96"/>
+</instance>
+<instance part="P+3" gate="VCC" x="7.62" y="66.04" smashed="yes">
+<attribute name="VALUE" x="5.08" y="63.5" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C1" gate="G$1" x="15.24" y="58.42" smashed="yes" rot="R90">
+<attribute name="NAME" x="14.605" y="59.436" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="19.431" y="59.436" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="X1" gate="G$1" x="55.88" y="53.34" smashed="yes">
+<attribute name="NAME" x="50.8" y="58.42" size="1.778" layer="95"/>
+<attribute name="VALUE" x="50.8" y="45.72" size="1.778" layer="96"/>
+</instance>
+<instance part="GND1" gate="1" x="33.02" y="45.72" smashed="yes">
+<attribute name="VALUE" x="30.48" y="43.18" size="1.778" layer="96"/>
+</instance>
+<instance part="OK1" gate="A" x="-43.18" y="7.62" smashed="yes">
+<attribute name="NAME" x="-50.165" y="13.335" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-50.165" y="-2.54" size="1.778" layer="96"/>
+</instance>
+<instance part="R1" gate="G$1" x="-66.04" y="12.7" smashed="yes">
+<attribute name="NAME" x="-69.85" y="14.1986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-69.85" y="9.398" size="1.778" layer="96"/>
+</instance>
+<instance part="D1" gate="G$1" x="-58.42" y="5.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="-58.9026" y="7.62" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-56.1086" y="7.62" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C2" gate="G$1" x="-33.02" y="17.78" smashed="yes">
+<attribute name="NAME" x="-32.004" y="18.415" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-32.004" y="13.589" size="1.778" layer="96"/>
+</instance>
+<instance part="GND4" gate="1" x="-33.02" y="-22.86" smashed="yes">
+<attribute name="VALUE" x="-35.56" y="-25.4" size="1.778" layer="96"/>
+</instance>
+<instance part="P+4" gate="VCC" x="-27.94" y="30.48" smashed="yes">
+<attribute name="VALUE" x="-30.48" y="27.94" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P+5" gate="VCC" x="-17.78" y="17.78" smashed="yes">
+<attribute name="VALUE" x="-20.32" y="15.24" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R2" gate="G$1" x="-17.78" y="7.62" smashed="yes" rot="R90">
+<attribute name="NAME" x="-19.2786" y="3.81" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-14.478" y="3.81" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="X2" gate="G$1" x="-81.28" y="-7.62" smashed="yes" rot="R90">
+<attribute name="VALUE" x="-92.075" y="-7.62" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="-92.075" y="-17.78" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="FRAME1" gate="G$1" x="-137.16" y="-86.36" smashed="yes"/>
+<instance part="FRAME1" gate="G$2" x="35.56" y="-86.36" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="48.26" y="-85.09" size="2.54" layer="94"/>
+<attribute name="SHEET" x="121.92" y="-85.09" size="2.54" layer="94"/>
+<attribute name="DRAWING_NAME" x="53.34" y="-67.31" size="2.54" layer="94"/>
+</instance>
+<instance part="VP_0" gate="G$1" x="-145.6055" y="129.84" smashed="yes"/>
+<instance part="VP_1" gate="G$1" x="-145.6055" y="127.3" smashed="yes"/>
+<instance part="VP_2" gate="G$1" x="-145.6055" y="124.76" smashed="yes"/>
+<instance part="VP_3" gate="G$1" x="-145.6055" y="122.22" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -10414,17 +10508,46 @@ https://creativecommons.org/licenses/</text>
 <wire x1="-63.5" y1="-25.4" x2="-63.5" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="VP_0" gate="G$1" pin="VP"/>
+<wire x1="-145.6055" y1="129.84" x2="-148.1455" y2="129.84" width="0.1524" layer="91"/>
+<label x="-148.1455" y="129.84" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="VP_1" gate="G$1" pin="VP"/>
+<wire x1="-145.6055" y1="127.3" x2="-148.1455" y2="127.3" width="0.1524" layer="91"/>
+<label x="-148.1455" y="127.3" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="VP_2" gate="G$1" pin="VP"/>
+<wire x1="-145.6055" y1="124.76" x2="-148.1455" y2="124.76" width="0.1524" layer="91"/>
+<label x="-148.1455" y="124.76" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="VP_3" gate="G$1" pin="VP"/>
+<wire x1="-145.6055" y1="122.22" x2="-148.1455" y2="122.22" width="0.1524" layer="91"/>
+<label x="-148.1455" y="122.22" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="204,1,93.98,12.7,U$1,AGND,,,,"/>
-<approved hash="204,1,93.98,30.48,U$1,3.3V,,,,"/>
-<approved hash="204,1,93.98,27.94,U$1,VBAT,,,,"/>
-<approved hash="204,1,93.98,15.24,U$1,AREF,,,,"/>
-<approved hash="204,1,93.98,35.56,U$1,VUSB,,,,"/>
-<approved hash="104,1,93.98,33.02,U$1,VIN,VCC,,,"/>
-<approved hash="204,1,-20.32,-15.24,X2,PE,,,,"/>
+<approved hash="204,1,40.64,7.62,U$1,AGND,,,,"/>
+<approved hash="204,1,40.64,25.4,U$1,3.3V,,,,"/>
+<approved hash="204,1,40.64,22.86,U$1,VBAT,,,,"/>
+<approved hash="204,1,40.64,10.16,U$1,AREF,,,,"/>
+<approved hash="204,1,40.64,30.48,U$1,VUSB,,,,"/>
+<approved hash="104,1,40.64,27.94,U$1,VIN,VCC,,,"/>
+<approved hash="204,1,-73.66,-20.32,X2,PE,,,,"/>
+<approved hash="113,1,2.436,21.486,FRAME1,,,,,"/>
 </errors>
 </schematic>
 </drawing>

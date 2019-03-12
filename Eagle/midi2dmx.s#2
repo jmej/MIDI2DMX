@@ -10245,6 +10245,9 @@ Audio, scart, microphone, headphone&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
+<text x="66.04" y="-60.96" size="2.1844" layer="91">Designed by Jesse Mejía
+PCC Music and Sonic Arts
+Fall 2016</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="17.78" y="0"/>
@@ -10425,4 +10428,10 @@ Audio, scart, microphone, headphone&lt;p&gt;
 </errors>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

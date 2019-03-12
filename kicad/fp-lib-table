@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "midi2dmx")(type Legacy)(uri "C:/Users/PCC User/Documents/projects/MIDI2DMX/kicad/midi2dmx.mod")(options "")(descr ""))
+)

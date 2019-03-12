@@ -1,0 +1,101 @@
+Cmp-Mod V01 Created by Cvpcb (2015-02-06 BZR 5410)-product   date = Mon 09 Feb 2015 04:12:04 PM PST
+
+BeginCmp
+TimeStamp = /5C87EDFE;
+Reference = C1;
+ValeurCmp = C-US025-024X044;
+IdModule  = C025-024X044;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87EEC6;
+Reference = C2;
+ValeurCmp = C-US025-024X044;
+IdModule  = C025-024X044;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87EF8E;
+Reference = D1;
+ValeurCmp = 1N4148DO35-7;
+IdModule  = DO35-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87F2AE;
+Reference = OK1;
+ValeurCmp = PC110;
+IdModule  = DIL06;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87F56A;
+Reference = R1;
+ValeurCmp = R-US_0309/12;
+IdModule  = 0309_12;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87F632;
+Reference = R2;
+ValeurCmp = R-US_0309/12;
+IdModule  = 0309_12;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87F6FA;
+Reference = U$1;
+ValeurCmp = TEENSY_3.1-3.2_ALL_PINS;
+IdModule  = TEENSY_3.0-3.2&LC_ALL_PINS;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87F7C2;
+Reference = U$2;
+ValeurCmp = MAX485DIL;
+IdModule  = DIL08;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87F88A;
+Reference = VP_0;
+ValeurCmp = VPDEV0;
+IdModule  = VPAC0;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87F952;
+Reference = VP_1;
+ValeurCmp = VPDEV0;
+IdModule  = VPAC0;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87FA1A;
+Reference = VP_2;
+ValeurCmp = VPDEV0;
+IdModule  = VPAC0;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87FAE2;
+Reference = VP_3;
+ValeurCmp = VPDEV0;
+IdModule  = VPAC0;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87FBAA;
+Reference = X1;
+ValeurCmp = NC3FBH2;
+IdModule  = NC3FBH2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5C87FC72;
+Reference = X2;
+ValeurCmp = MAB5SH;
+IdModule  = MAB5SH;
+EndCmp
+
+EndListe
