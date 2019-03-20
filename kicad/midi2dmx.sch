@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 26 0
+LIBS:midi2dmx-cache
+EELAYER 29 0
 EELAYER END
 $Descr A0 46811 33110
 encoding utf-8
@@ -57,17 +58,6 @@ F 1 "~" H 5600 11900 50  0001 C CNN
 F 2 "" H 5600 11900 50  0001 C CNN
 F 3 "" H 5600 11900 50  0001 C CNN
 	1    5600 11900
-	1    0    0    -1  
-$EndComp
-$Comp
-L midi2dmx:FRAME_A_L #FRAME1
-U 2 1 5C87F0BA
-P 12450 11900
-F 0 "#FRAME1" H 12500 12350 100 0000 L BNN
-F 1 "Document Number:" H 12600 11450 100 0000 L BNN
-F 2 "" H 12450 11900 60  0001 C CNN
-F 3 "" H 12450 11900 60  0001 C CNN
-	2    12450 11900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -156,12 +146,6 @@ Wire Wire Line
 Wire Wire Line
 	8600 8000 8700 8000
 Wire Wire Line
-	10800 8300 10500 8300
-Wire Wire Line
-	10500 8300 10500 8400
-Wire Wire Line
-	10500 8400 10300 8400
-Wire Wire Line
 	7900 8000 8200 8000
 Wire Wire Line
 	7900 8000 7900 8300
@@ -178,92 +162,28 @@ Wire Wire Line
 Connection ~ 8700 8400
 Wire Wire Line
 	12600 7400 12800 7400
-Text GLabel 12600 7700 2    10   UnSpc ~ 0
-GND
-Text GLabel 12800 7700 1    10   UnSpc ~ 0
-GND
-Text GLabel 9600 8200 2    10   UnSpc ~ 0
-GND
-Text Label 10800 7500 2    10   ~ 0
-N$1
-Text Label 8600 8000 0    10   ~ 0
-N$4
-Text Label 8700 8200 1    10   ~ 0
-N$4
-Text Label 8900 8100 2    10   ~ 0
-N$4
-Text Label 10300 8400 3    10   ~ 0
-N$5
-Text Label 9600 8400 0    10   ~ 0
-N$5
-Text Label 10800 8300 2    10   ~ 0
-N$5
 Text Label 8200 8000 2    10   ~ 0
 N$6
 Text Label 7900 8300 1    10   ~ 0
 N$6
-Text Label 8700 8400 3    10   ~ 0
-N$7
-Text Label 8900 8400 2    10   ~ 0
-N$7
-Text Label 7900 9300 3    10   ~ 0
-N$7
-Text Label 12600 7400 0    10   ~ 0
-VCC
-Text Label 9600 8100 0    10   ~ 0
-VCC
-Text Label 10300 8000 1    10   ~ 0
-VCC
-Text Label 9400 6000 3    10   ~ 0
-VCC
 Wire Wire Line
 	9400 6000 9400 6400
-Text Label 10100 6500 2    10   ~ 0
-VCC
-Text Label 10100 6600 2    10   ~ 0
-N$1
-Text Label 10100 6400 2    10   ~ 0
-VCC
 Wire Wire Line
 	9400 6400 10100 6400
 Wire Wire Line
 	10100 6400 10100 6500
-Text Label 12900 6500 2    10   ~ 0
-N$3
-Text Label 12900 6400 2    10   ~ 0
-N$2
-Text GLabel 12900 6300 0    10   UnSpc ~ 0
-GND
 Wire Wire Line
 	12900 6300 12300 6300
-Text GLabel 12300 6600 1    10   UnSpc ~ 0
-GND
 Wire Wire Line
 	12300 6300 12300 6600
-Text GLabel 11800 6600 1    10   UnSpc ~ 0
-GND
 Wire Wire Line
 	11800 6200 11800 6600
-Text GLabel 11800 6200 2    10   UnSpc ~ 0
-GND
-Text Label 11500 6200 2    10   ~ 0
-VCC
-Text Label 11300 6000 3    10   ~ 0
-VCC
 Wire Wire Line
 	11500 6200 11300 6200
-Text Label 11300 6300 0    10   ~ 0
-VCC
-Text Label 11300 6400 0    10   ~ 0
-N$2
 Wire Wire Line
 	11300 6400 12900 6400
-Text Label 11300 6500 0    10   ~ 0
-N$3
 Wire Wire Line
 	12900 6500 11300 6500
-Text GLabel 11300 6600 2    10   UnSpc ~ 0
-GND
 Wire Wire Line
 	11300 6600 11800 6600
 Connection ~ 11800 6600
@@ -318,12 +238,7 @@ F 3 "http://www.onsemi.com/pub/Collateral/HCPL2731-D.pdf" H 9490 8000 50  0001 C
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8700 8000 8700 8200
-Wire Wire Line
 	8700 8200 8900 8200
-Connection ~ 8700 8200
-Text Label 9900 7400 3    10   ~ 0
-VCC
 Wire Wire Line
 	9500 8100 9900 8100
 Wire Wire Line
@@ -392,9 +307,6 @@ F 3 "" H 9400 6000 50  0001 C CNN
 	1    9400 6000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10300 8400 9500 8400
-Connection ~ 10300 8400
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5C88A500
@@ -421,4 +333,27 @@ Wire Wire Line
 	13050 7250 13050 7500
 Wire Wire Line
 	13050 7500 12600 7500
+Wire Wire Line
+	10300 8400 9500 8400
+Connection ~ 8700 8200
+Wire Wire Line
+	8700 8000 8700 8200
+$Comp
+L midi2dmx:FRAME_A_L #FRAME1
+U 2 1 5C87F0BA
+P 12250 11900
+F 0 "#FRAME1" H 11450 11400 100 0000 L BNN
+F 1 "Document Number:" H 12400 11450 100 0000 L BNN
+F 2 "" H 12250 11900 60  0001 C CNN
+F 3 "" H 12250 11900 60  0001 C CNN
+	2    12250 11900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 8400 10600 8400
+Wire Wire Line
+	10600 8400 10600 7400
+Wire Wire Line
+	10600 7400 10800 7400
+Connection ~ 10300 8400
 $EndSCHEMATC
