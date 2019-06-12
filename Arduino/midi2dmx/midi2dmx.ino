@@ -17,15 +17,25 @@ MIDI_CREATE_INSTANCE(HardwareSerial, Serial2, MIDI);
 
 void setup() {
   Serial1.begin(250000);
+  delay(3000);
+  Serial.println("hi");
   usbMIDI.setHandleControlChange(OnControlChange);
   MIDI.begin(MIDI_CHANNEL_OMNI);
+  
   MIDI.setHandleControlChange(OnControlChange);
+
+  Serial.println("setup complete?");
+
 }
 
 elapsedMillis timeout;
 
 void OnControlChange(byte channel, byte control, byte value) {
-  led_channel(control, value*2);
+//  Serial.println("got a midi cc");
+    int ch = (channel -1)*128 + control;
+    led_channel(ch, value*2);
+
+
 //  Serial.println("got midi");
 //  Serial.println(value);
 }
@@ -34,9 +44,6 @@ void loop() {
   leds_update();
   usbMIDI.read(); // USB MIDI receive
   MIDI.read();
+  //Serial.println("wtf mate?");
+  delay(10);
 }
-
-
-
-
-
