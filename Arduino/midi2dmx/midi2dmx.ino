@@ -24,10 +24,12 @@ void setup() {
 
 elapsedMillis timeout;
 
-void OnControlChange(byte channel, byte control, byte value) {
-  led_channel(control, value*2);
-//  Serial.println("got midi");
-//  Serial.println(value);
+void OnControlChange(byte channel, byte control, byte value) {  
+//  Serial.println("got a midi cc");  
+    int ch = (channel -1)*128 + control;  
+    led_channel(ch, value*2); 
+//  Serial.println("got midi"); 
+//  Serial.println(value);  
 }
 
 void loop() {
