@@ -15,9 +15,15 @@ extern void led_channel(unsigned int num, unsigned int val);
 
 MIDI_CREATE_INSTANCE(HardwareSerial, Serial2, MIDI);
 
+long counter = 0;
+int decay = 64; //starts decay at the halfway point
+//maybe map functions will look something like 0, 127, 10, 5000?
+
+
 void setup() {
   Serial1.begin(250000);
   usbMIDI.setHandleControlChange(OnControlChange);
+  usbMIDI.setHandleNoteOn(OnNoteIn);
   MIDI.begin(MIDI_CHANNEL_OMNI);
   MIDI.setHandleControlChange(OnControlChange);
 }
@@ -32,13 +38,21 @@ void OnControlChange(byte channel, byte control, byte value) {
 //  Serial.println(value);  
 }
 
+void OnNoteOn(byte channel, byte note, byte velocity) {
+  Serial.println("got a midi note");
+  
+}
+
 void loop() {
   leds_update();
   usbMIDI.read(); // USB MIDI receive
   MIDI.read();
+  delay(5);
 }
 
-
+int msToModTime(int ms){ //function to convert ms values into modulo numbers based on framerate delay of 5ms
+  
+}
 
 
 
