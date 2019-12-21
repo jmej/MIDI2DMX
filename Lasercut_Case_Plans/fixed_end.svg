@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="8.413in"
+   height="5.607in"
+   viewBox=" 0 0 757.1700000000001 504.63"
+   id="svg66"
+   sodipodi:docname="fixed_end.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata72">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs70" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1860"
+     inkscape:window-height="892"
+     id="namedview68"
+     showgrid="true"
+     inkscape:zoom="2.3330615"
+     inkscape:cx="320.25969"
+     inkscape:cy="428.0208"
+     inkscape:window-x="11"
+     inkscape:window-y="21"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg66">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3777" />
+  </sodipodi:namedview>
+  <!-- Front-->
+  <!-- Back-->
+  <g
+     transform="translate(203.04,5.3819894)"
+     id="g48"
+     style="stroke-width:0.09375;stroke-miterlimit:4;stroke-dasharray:none">
+    <polygon
+       style="fill:none;stroke:#ff0000;stroke-width:0.09375;stroke-miterlimit:4;stroke-dasharray:none"
+       points="44.685,0 44.685,10.62 87.57,10.62 87.57,0 115.47,0 115.47,10.62 158.355,10.62 158.355,0 203.04,0 203.04,31.248 192.42,31.248 192.42,60.696 203.04,60.696 203.04,91.944 192.42,91.944 192.42,121.392 203.04,121.392 203.04,152.64 158.355,152.64 158.355,142.02 115.47,142.02 115.47,152.64 87.57,152.64 87.57,142.02 44.685,142.02 44.685,152.64 0,152.64 0,121.392 10.62,121.392 10.62,91.944 0,91.944 0,60.696 10.62,60.696 10.62,31.248 0,31.248 0,0 "
+       id="polygon46" />
+  </g>
+  <!-- Left-->
+  <!-- Right-->
+  <!-- Top-->
+  <!-- Bottom-->
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.09375;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="rect4590"
+     width="72"
+     height="75.150002"
+     x="301.82199"
+     y="54.62999" />
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.09375;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="rect4592"
+     width="28.800001"
+     height="10.8"
+     x="250.2"
+     y="108.62999"
+     inkscape:transform-center-x="-1.2054976" />
+</svg>
