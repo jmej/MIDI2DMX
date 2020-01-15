@@ -23,7 +23,7 @@ int decay = 64; //starts decay at the halfway point
 void setup() {
   Serial1.begin(250000);
   usbMIDI.setHandleControlChange(OnControlChange);
-  //usbMIDI.setHandleNoteOn(OnNoteIn); //future stuffs
+  //usbMIDI.setHandleNoteOn(OnNoteIn); //future stuff
   MIDI.begin(MIDI_CHANNEL_OMNI);
   MIDI.setHandleControlChange(OnControlChange);
 }
@@ -50,6 +50,3 @@ void loop() {
   delay(5);
 }
 
-int msToModTime(int ms){ //function to convert ms values into modulo numbers based on framerate delay of 5ms
-  
-}

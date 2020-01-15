@@ -5,7 +5,7 @@ extern void led_color(unsigned int num, unsigned int rgb);
 extern void led_color(unsigned int num, unsigned char red, unsigned char green, unsigned char blue);
 
 
-#define CHANNELS  127
+#define CHANNELS  512
 
 static unsigned char ch[CHANNELS];
 static int state=0;
