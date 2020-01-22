@@ -32,8 +32,8 @@ elapsedMillis timeout;
 
 void OnControlChange(byte channel, byte control, byte value) {  
 //  Serial.println("got a midi cc");  
-    int ch = (channel -1)*128 + control;  
-    led_channel(ch, value*2); 
+    int dmxChannel = (channel -1)*128 + control;  
+    led_channel(dmxChannel, value*2); 
 //  Serial.println("got midi"); 
 //  Serial.println(value);  
 }
@@ -49,4 +49,3 @@ void loop() {
   MIDI.read();
   delay(5);
 }
-

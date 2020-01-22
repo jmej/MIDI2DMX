@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name midi2dmx)(type Legacy)(uri ${KIPRJMOD}/midi2dmx.lib)(options "")(descr ""))
+  (lib (name midi2dmx-rescue)(type Legacy)(uri ${KIPRJMOD}/midi2dmx-rescue.lib)(options "")(descr ""))
 )

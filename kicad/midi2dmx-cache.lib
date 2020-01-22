@@ -1,14 +1,75 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Isolator_6N138
+# 4ms-headers_Conn_01x06
 #
-DEF Isolator_6N138 U 0 40 Y N 1 F N
+DEF 4ms-headers_Conn_01x06 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "4ms-headers_Conn_01x06" 0 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 250 50 -350 1 1 10 f
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+X Pin_6 6 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# midi2dmx-rescue_+3.3V-power
+#
+DEF midi2dmx-rescue_+3.3V-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "midi2dmx-rescue_+3.3V-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# midi2dmx-rescue_+5V-power
+#
+DEF midi2dmx-rescue_+5V-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "midi2dmx-rescue_+5V-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# midi2dmx-rescue_6N138-Isolator
+#
+DEF midi2dmx-rescue_6N138-Isolator U 0 40 Y N 1 F N
 F0 "U" -160 350 50 H V C CNN
-F1 "Isolator_6N138" 90 350 50 H V C CNN
+F1 "midi2dmx-rescue_6N138-Isolator" 90 350 50 H V C CNN
 F2 "" 290 -300 50 H I C CNN
 F3 "" 290 -300 50 H I C CNN
-ALIAS 6N139
 $FPLIST
  DIP*W7.62mm*
  SMDIP*W9.53mm*
@@ -171,7 +232,7 @@ ENDDEF
 #
 # midi2dmx_FRAME_A_L
 #
-DEF ~midi2dmx_FRAME_A_L #FRAME 0 40 N N 2 L N
+DEF midi2dmx_FRAME_A_L #FRAME 0 40 N N 2 L N
 F0 "#FRAME" 0 0 45 H I C CNN
 F1 "midi2dmx_FRAME_A_L" 0 0 45 H I C CNN
 F2 "" 0 0 50 H I C CNN
@@ -405,37 +466,6 @@ X A14/DAC RESET/DAC 900 100 200 L 40 40 1 1 B
 X VBAT VBAT 900 900 200 L 40 40 1 1 W
 X VIN VIN 900 1100 200 L 40 40 1 1 W
 X VUSB VUSB 900 1200 200 L 40 40 1 1 W
-ENDDRAW
-ENDDEF
-#
-# power_+3.3V
-#
-DEF power_+3.3V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+3.3V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_+5V
-#
-DEF power_+5V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+5V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
