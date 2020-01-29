@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 12500 10900 0    63   ~ 0
-Designed by Jesse Mejía for PCC Music and Sonic Arts Fall 2016\nReleased under the Creative Commons Attribution ShareAlike License\nhttps://creativecommons.org/licenses/
+Designed by Jesse Mejía for PCC Music and Sonic Arts Fall 2016-2020\nReleased under the Creative Commons Attribution ShareAlike License\nhttps://creativecommons.org/licenses/
 $Comp
 L midi2dmx:C-US025-024X044 C1
 U 1 1 5C87EE62
@@ -220,7 +220,7 @@ U 1 1 5C87F826
 P 10700 6500
 F 0 "U$2" H 10300 6800 70  0000 L BNN
 F 1 "MAX485DIL" H 10300 6200 70  0000 L BNN
-F 2 "midi2dmx:DIL08" H 10690 6290 65  0001 L TNN
+F 2 "4ms_Package_DIP:DIP-8pin_TH" H 10690 6290 65  0001 L TNN
 F 3 "" H 10700 6500 50  0001 C CNN
 	1    10700 6500
 	1    0    0    -1  
@@ -309,12 +309,12 @@ $EndComp
 $Comp
 L midi2dmx-rescue:+3.3V-power #PWR0105
 U 1 1 5C88A500
-P 10300 8000
-F 0 "#PWR0105" H 10300 7850 50  0001 C CNN
-F 1 "+3.3V" H 10315 8173 50  0000 C CNN
-F 2 "" H 10300 8000 50  0001 C CNN
-F 3 "" H 10300 8000 50  0001 C CNN
-	1    10300 8000
+P 10300 7825
+F 0 "#PWR0105" H 10300 7675 50  0001 C CNN
+F 1 "+3.3V" H 10315 7998 50  0000 C CNN
+F 2 "" H 10300 7825 50  0001 C CNN
+F 3 "" H 10300 7825 50  0001 C CNN
+	1    10300 7825
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -350,20 +350,219 @@ F 3 "" H 12250 11900 60  0001 C CNN
 $EndComp
 Wire Wire Line
 	10300 8400 10600 8400
-Wire Wire Line
-	10600 8400 10600 7400
-Wire Wire Line
-	10600 7400 10800 7400
 Connection ~ 10300 8400
 $Comp
 L 4ms-headers:Conn_01x06 J1
 U 1 1 5E201C2B
-P 14300 7900
-F 0 "J1" H 14380 7892 50  0000 L CNN
-F 1 "Conn_01x06" H 14380 7801 50  0000 L CNN
-F 2 "" H 14300 7900 50  0001 C CNN
-F 3 "" H 14300 7900 50  0001 C CNN
-	1    14300 7900
+P 13700 8200
+F 0 "J1" H 13780 8192 50  0000 L CNN
+F 1 "pwr_gnd" H 13780 8101 50  0000 L CNN
+F 2 "4ms_Connector:Pins_1x06_2.54mm_TH_SWD" H 13700 8200 50  0001 C CNN
+F 3 "" H 13700 8200 50  0001 C CNN
+	1    13700 8200
 	1    0    0    -1  
 $EndComp
+$Comp
+L 4ms-power:+3.3V #PWR0107
+U 1 1 5E31F218
+P 13400 8000
+F 0 "#PWR0107" H 13400 7850 50  0001 C CNN
+F 1 "+3.3V" H 13415 8173 50  0000 C CNN
+F 2 "" H 13400 8000 50  0001 C CNN
+F 3 "" H 13400 8000 50  0001 C CNN
+	1    13400 8000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13500 8000 13400 8000
+$Comp
+L 4ms-power:GND #PWR0108
+U 1 1 5E320661
+P 13400 8600
+F 0 "#PWR0108" H 13400 8350 50  0001 C CNN
+F 1 "GND" H 13405 8427 50  0000 C CNN
+F 2 "" H 13400 8600 50  0001 C CNN
+F 3 "" H 13400 8600 50  0001 C CNN
+	1    13400 8600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13400 8600 13400 8500
+Wire Wire Line
+	13400 8300 13500 8300
+Wire Wire Line
+	13500 8400 13400 8400
+Connection ~ 13400 8400
+Wire Wire Line
+	13400 8400 13400 8300
+Wire Wire Line
+	13500 8500 13400 8500
+Connection ~ 13400 8500
+Wire Wire Line
+	13400 8500 13400 8400
+Wire Wire Line
+	13500 8100 13400 8100
+Wire Wire Line
+	13400 8100 13400 8000
+Connection ~ 13400 8000
+Wire Wire Line
+	13500 8200 13400 8200
+Wire Wire Line
+	13400 8200 13400 8100
+Connection ~ 13400 8100
+$Comp
+L 4ms-headers:Conn_01x03 J2
+U 1 1 5E324440
+P 10000 9100
+F 0 "J2" H 9918 8775 50  0000 C CNN
+F 1 "an 0-3" H 9918 8866 50  0000 C CNN
+F 2 "4ms_Connector:Pins_1x03_2.54mm_TH" H 10000 9100 50  0001 C CNN
+F 3 "" H 10000 9100 50  0001 C CNN
+	1    10000 9100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10200 9200 10500 9200
+Wire Wire Line
+	10500 9200 10500 8800
+Wire Wire Line
+	10500 8800 10800 8800
+Wire Wire Line
+	10200 9100 10400 9100
+Wire Wire Line
+	10400 9100 10400 8900
+Wire Wire Line
+	10400 8900 10800 8900
+Wire Wire Line
+	10200 9000 10800 9000
+$Comp
+L 4ms-headers:Conn_01x02 J3
+U 1 1 5E32E439
+P 10100 9600
+F 0 "J3" H 10180 9592 50  0000 L CNN
+F 1 "button" H 10180 9501 50  0000 L CNN
+F 2 "4ms_Connector:Pins_1x02_2.54mm_TH" H 10100 9600 50  0001 C CNN
+F 3 "~" H 10100 9600 50  0001 C CNN
+	1    10100 9600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 8700 9600 8700
+Wire Wire Line
+	9600 8700 9600 9500
+$Comp
+L 4ms-passives:R R3
+U 1 1 5E335039
+P 9600 9700
+F 0 "R3" H 9670 9746 50  0000 L CNN
+F 1 "R" H 9670 9655 50  0000 L CNN
+F 2 "4ms_Resistor:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9530 9700 50  0001 C CNN
+F 3 "" H 9600 9700 50  0001 C CNN
+	1    9600 9700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 9500 9900 9500
+Wire Wire Line
+	9900 9500 9900 9600
+Connection ~ 9600 9500
+Wire Wire Line
+	9600 9500 9600 9550
+$Comp
+L 4ms-power:GND #PWR0109
+U 1 1 5E337402
+P 9600 10000
+F 0 "#PWR0109" H 9600 9750 50  0001 C CNN
+F 1 "GND" H 9605 9827 50  0000 C CNN
+F 2 "" H 9600 10000 50  0001 C CNN
+F 3 "" H 9600 10000 50  0001 C CNN
+	1    9600 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4ms-power:+3.3V #PWR0110
+U 1 1 5E33D25D
+P 9810 9390
+F 0 "#PWR0110" H 9810 9240 50  0001 C CNN
+F 1 "+3.3V" H 9825 9563 50  0000 C CNN
+F 2 "" H 9810 9390 50  0001 C CNN
+F 3 "" H 9810 9390 50  0001 C CNN
+	1    9810 9390
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9810 9700 9900 9700
+Wire Wire Line
+	9810 9390 9810 9700
+Text GLabel 10630 9300 0    50   Input ~ 0
+scl
+Wire Wire Line
+	10625 9300 10800 9300
+Text GLabel 10725 9200 0    50   Input ~ 0
+sda
+Wire Wire Line
+	10800 9200 10725 9200
+Text GLabel 12850 9275 0    50   Input ~ 0
+sda
+Text GLabel 12825 9375 0    50   Input ~ 0
+scl
+$Comp
+L 4ms-power:+3.3V #PWR0111
+U 1 1 5E34531A
+P 12750 9175
+F 0 "#PWR0111" H 12750 9025 50  0001 C CNN
+F 1 "+3.3V" H 12765 9348 50  0000 C CNN
+F 2 "" H 12750 9175 50  0001 C CNN
+F 3 "" H 12750 9175 50  0001 C CNN
+	1    12750 9175
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4ms-power:GND #PWR0112
+U 1 1 5E3459C0
+P 12775 9600
+F 0 "#PWR0112" H 12775 9350 50  0001 C CNN
+F 1 "GND" H 12780 9427 50  0000 C CNN
+F 2 "" H 12775 9600 50  0001 C CNN
+F 3 "" H 12775 9600 50  0001 C CNN
+	1    12775 9600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13175 9275 12850 9275
+Wire Wire Line
+	13175 9175 12750 9175
+Wire Wire Line
+	13175 9375 12825 9375
+$Comp
+L 4ms-headers:Conn_01x05 J4
+U 1 1 5E3526A3
+P 13375 9375
+F 0 "J4" H 13455 9417 50  0000 L CNN
+F 1 "i2c" H 13455 9326 50  0000 L CNN
+F 2 "4ms_Connector:Pins_1x05_2.54mm_TH" H 13375 9375 50  0001 C CNN
+F 3 "~" H 13375 9375 50  0001 C CNN
+	1    13375 9375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13175 9575 12775 9575
+Wire Wire Line
+	12775 9575 12775 9600
+Text GLabel 12825 9475 0    50   Input ~ 0
+rst
+Wire Wire Line
+	13175 9475 12825 9475
+Text GLabel 10625 8600 0    50   Input ~ 0
+rst
+Wire Wire Line
+	10625 8600 10800 8600
+Wire Wire Line
+	10800 8300 10600 8300
+Wire Wire Line
+	10600 8300 10600 8400
+Wire Wire Line
+	9600 10000 9600 9850
+Wire Wire Line
+	10300 7825 10300 8000
 $EndSCHEMATC
