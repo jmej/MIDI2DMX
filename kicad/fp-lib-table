@@ -1,4 +1,6 @@
 (fp_lib_table
   (lib (name midi2dmx)(type Legacy)(uri "C:/Users/PCC User/Documents/projects/MIDI2DMX/kicad/midi2dmx.mod")(options "")(descr ""))
   (lib (name teensy)(type Github)(uri https://github.com/XenGi/teensy.pretty)(options "")(descr ""))
+  (lib (name goose)(type KiCad)(uri "C:/Users/PCC User/Desktop/goose")(options "")(descr ""))
+  (lib (name clipart)(type KiCad)(uri ${KIPRJMOD}/clipart)(options "")(descr ""))
 )
