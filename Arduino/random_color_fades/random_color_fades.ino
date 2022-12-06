@@ -58,11 +58,7 @@ void loop() {
   led_channel(1, r);
   led_channel(2, g);
   led_channel(3, b);
+  led_channel(7, 127);
   usbMIDI.read(); // USB MIDI receive
   delay(1);
 }
-
-
-
-
-
