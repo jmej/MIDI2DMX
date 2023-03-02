@@ -1,0 +1,562 @@
+EESchema Schematic File Version 5
+EELAYER 36 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Midi2DMX v2"
+Date "Spring 2023"
+Rev "2"
+Comp "Jesse Mejia"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
+$EndDescr
+Connection ~ 2800 3350
+Connection ~ 2800 3550
+Connection ~ 3700 4650
+Connection ~ 4000 2600
+Connection ~ 4200 1550
+Connection ~ 4400 3550
+Connection ~ 5400 1350
+Connection ~ 5900 1750
+Connection ~ 7500 3150
+Connection ~ 7500 3250
+Connection ~ 7500 3550
+Connection ~ 7500 3650
+Wire Wire Line
+	2000 3150 2000 3450
+Wire Wire Line
+	2000 3150 2300 3150
+Wire Wire Line
+	2000 4450 2000 4650
+Wire Wire Line
+	2000 4650 2600 4650
+Wire Wire Line
+	2600 3550 2800 3550
+Wire Wire Line
+	2600 4650 2600 3550
+Wire Wire Line
+	2700 3150 2800 3150
+Wire Wire Line
+	2800 3150 2800 3350
+Wire Wire Line
+	2800 3350 3000 3350
+Wire Wire Line
+	3000 3550 2800 3550
+Wire Wire Line
+	3500 1150 3500 1550
+Wire Wire Line
+	3500 1550 4200 1550
+Wire Wire Line
+	3600 3250 4000 3250
+Wire Wire Line
+	3650 2600 3650 2650
+Wire Wire Line
+	3700 3850 3700 4650
+Wire Wire Line
+	3700 4650 3700 4700
+Wire Wire Line
+	3700 4650 4000 4650
+Wire Wire Line
+	3700 5150 3700 5000
+Wire Wire Line
+	3910 4540 3910 4850
+Wire Wire Line
+	3910 4850 4000 4850
+Wire Wire Line
+	4000 2550 4000 2600
+Wire Wire Line
+	4000 2600 3650 2600
+Wire Wire Line
+	4000 2600 4000 3250
+Wire Wire Line
+	4000 4650 4000 4750
+Wire Wire Line
+	4200 1550 4200 1650
+Wire Wire Line
+	4200 2650 4200 1750
+Wire Wire Line
+	4300 4150 4900 4150
+Wire Wire Line
+	4300 4250 4500 4250
+Wire Wire Line
+	4300 4350 4600 4350
+Wire Wire Line
+	4400 2975 4400 3150
+Wire Wire Line
+	4400 3550 3600 3550
+Wire Wire Line
+	4400 3550 4700 3550
+Wire Wire Line
+	4500 4050 4900 4050
+Wire Wire Line
+	4500 4250 4500 4050
+Wire Wire Line
+	4600 3950 4900 3950
+Wire Wire Line
+	4600 4350 4600 3950
+Wire Wire Line
+	4700 3450 4700 3550
+Wire Wire Line
+	4725 3750 4900 3750
+Wire Wire Line
+	4725 4450 4900 4450
+Wire Wire Line
+	4900 2650 4200 2650
+Wire Wire Line
+	4900 3450 4700 3450
+Wire Wire Line
+	4900 3850 3700 3850
+Wire Wire Line
+	4900 4350 4825 4350
+Wire Wire Line
+	5400 1350 5400 1150
+Wire Wire Line
+	5400 1450 5400 1350
+Wire Wire Line
+	5400 1550 7000 1550
+Wire Wire Line
+	5400 1750 5900 1750
+Wire Wire Line
+	5600 1350 5400 1350
+Wire Wire Line
+	5900 1350 5900 1750
+Wire Wire Line
+	6400 1450 6400 1750
+Wire Wire Line
+	6700 2550 6900 2550
+Wire Wire Line
+	6875 4725 6875 4750
+Wire Wire Line
+	6900 2350 6900 2550
+Wire Wire Line
+	6900 2850 6700 2850
+Wire Wire Line
+	7000 1450 6400 1450
+Wire Wire Line
+	7000 1650 5400 1650
+Wire Wire Line
+	7150 2400 7150 2650
+Wire Wire Line
+	7150 2650 6700 2650
+Wire Wire Line
+	7275 4325 6850 4325
+Wire Wire Line
+	7275 4425 6950 4425
+Wire Wire Line
+	7275 4525 6925 4525
+Wire Wire Line
+	7275 4625 6925 4625
+Wire Wire Line
+	7275 4725 6875 4725
+Wire Wire Line
+	7500 3250 7500 3150
+Wire Wire Line
+	7500 3350 7500 3250
+Wire Wire Line
+	7500 3450 7600 3450
+Wire Wire Line
+	7500 3550 7500 3450
+Wire Wire Line
+	7500 3650 7500 3550
+Wire Wire Line
+	7500 3750 7500 3650
+Wire Wire Line
+	7600 3150 7500 3150
+Wire Wire Line
+	7600 3250 7500 3250
+Wire Wire Line
+	7600 3350 7500 3350
+Wire Wire Line
+	7600 3550 7500 3550
+Wire Wire Line
+	7600 3650 7500 3650
+Text Notes 6600 6050 0    63   ~ 0
+Designed by Jesse Mejía 2016-2023\nReleased under the Creative Commons Attribution ShareAlike License\nhttps://creativecommons.org/licenses/
+Text Label 2000 3450 1    10   ~ 0
+N$6
+Text Label 2300 3150 2    10   ~ 0
+N$6
+Text GLabel 4725 3750 0    50   Input ~ 0
+rst
+Text GLabel 4730 4450 0    50   Input ~ 0
+scl
+Text GLabel 4825 4350 0    50   Input ~ 0
+sda
+Text GLabel 6925 4525 0    50   Input ~ 0
+scl
+Text GLabel 6925 4625 0    50   Input ~ 0
+rst
+Text GLabel 6950 4425 0    50   Input ~ 0
+sda
+$Comp
+L midi2dmx:FRAME_A_L #FRAME2
+U 1 1 5C87F056
+P -300 7050
+F 0 "#FRAME2" H -250 7100 50  0001 C CNN
+F 1 "~" H -300 7050 50  0001 C CNN
+F 2 "" H -300 7050 50  0001 C CNN
+F 3 "" H -300 7050 50  0001 C CNN
+	1    -300 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+5V-power #PWR0104
+U 1 1 5C88930C
+P 3500 1150
+F 0 "#PWR0104" H 3500 1000 50  0001 C CNN
+F 1 "+5V" H 3515 1323 50  0000 C CNN
+F 2 "" H 3500 1150 50  0001 C CNN
+F 3 "" H 3500 1150 50  0001 C CNN
+	1    3500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+3.3V-4ms-power #PWR0110
+U 1 1 5E33D25D
+P 3910 4540
+F 0 "#PWR0110" H 3910 4390 50  0001 C CNN
+F 1 "+3.3V" H 3925 4713 50  0000 C CNN
+F 2 "" H 3910 4540 50  0001 C CNN
+F 3 "" H 3910 4540 50  0001 C CNN
+	1    3910 4540
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+5V-power #PWR0101
+U 1 1 5C887AE6
+P 4000 2550
+F 0 "#PWR0101" H 4000 2400 50  0001 C CNN
+F 1 "+5V" H 4015 2723 50  0000 C CNN
+F 2 "" H 4000 2550 50  0001 C CNN
+F 3 "" H 4000 2550 50  0001 C CNN
+	1    4000 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+3.3V-power #PWR0105
+U 1 1 5C88A500
+P 4400 2975
+F 0 "#PWR0105" H 4400 2825 50  0001 C CNN
+F 1 "+3.3V" H 4415 3148 50  0000 C CNN
+F 2 "" H 4400 2975 50  0001 C CNN
+F 3 "" H 4400 2975 50  0001 C CNN
+	1    4400 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+5V-power #PWR0103
+U 1 1 5C8890DB
+P 5400 1150
+F 0 "#PWR0103" H 5400 1000 50  0001 C CNN
+F 1 "+5V" H 5415 1323 50  0000 C CNN
+F 2 "" H 5400 1150 50  0001 C CNN
+F 3 "" H 5400 1150 50  0001 C CNN
+	1    5400 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+3.3V-4ms-power #PWR0111
+U 1 1 5E34531A
+P 6850 4325
+F 0 "#PWR0111" H 6850 4175 50  0001 C CNN
+F 1 "+3.3V" H 6865 4498 50  0000 C CNN
+F 2 "" H 6850 4325 50  0001 C CNN
+F 3 "" H 6850 4325 50  0001 C CNN
+	1    6850 4325
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+5V-power #PWR0102
+U 1 1 5C888684
+P 6900 2350
+F 0 "#PWR0102" H 6900 2200 50  0001 C CNN
+F 1 "+5V" H 6915 2523 50  0000 C CNN
+F 2 "" H 6900 2350 50  0001 C CNN
+F 3 "" H 6900 2350 50  0001 C CNN
+	1    6900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+3.3V-power #PWR0106
+U 1 1 5C88A8F2
+P 7150 2400
+F 0 "#PWR0106" H 7150 2250 50  0001 C CNN
+F 1 "+3.3V" H 7165 2573 50  0000 C CNN
+F 2 "" H 7150 2400 50  0001 C CNN
+F 3 "" H 7150 2400 50  0001 C CNN
+	1    7150 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:+3.3V-4ms-power #PWR0107
+U 1 1 5E31F218
+P 7500 3150
+F 0 "#PWR0107" H 7500 3000 50  0001 C CNN
+F 1 "+3.3V" H 7515 3323 50  0000 C CNN
+F 2 "" H 7500 3150 50  0001 C CNN
+F 3 "" H 7500 3150 50  0001 C CNN
+	1    7500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:GND-4ms-power #PWR0109
+U 1 1 5E337402
+P 3700 5150
+F 0 "#PWR0109" H 3700 4900 50  0001 C CNN
+F 1 "GND" H 3705 4977 50  0000 C CNN
+F 2 "" H 3700 5150 50  0001 C CNN
+F 3 "" H 3700 5150 50  0001 C CNN
+	1    3700 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:GND-4ms-power #PWR0112
+U 1 1 5E3459C0
+P 6875 4750
+F 0 "#PWR0112" H 6875 4500 50  0001 C CNN
+F 1 "GND" H 6880 4577 50  0000 C CNN
+F 2 "" H 6875 4750 50  0001 C CNN
+F 3 "" H 6875 4750 50  0001 C CNN
+	1    6875 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:GND-4ms-power #PWR0108
+U 1 1 5E320661
+P 7500 3750
+F 0 "#PWR0108" H 7500 3500 50  0001 C CNN
+F 1 "GND" H 7505 3577 50  0000 C CNN
+F 2 "" H 7500 3750 50  0001 C CNN
+F 3 "" H 7500 3750 50  0001 C CNN
+	1    7500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:GND #GND04
+U 1 1 5C87F24A
+P 3600 3750
+F 0 "#GND04" H 3850 3700 70  0000 L BNN
+F 1 "GND" H 3500 3650 70  0000 L BNN
+F 2 "" H 3600 3750 60  0001 C CNN
+F 3 "" H 3600 3750 60  0001 C CNN
+	1    3600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:GND #GND0101
+U 1 1 5C887A4B
+P 3650 3050
+F 0 "#GND0101" H 3650 3050 45  0001 L BNN
+F 1 "GND" H 3650 2979 45  0000 C CNN
+F 2 "" H 3650 3050 50  0001 C CNN
+F 3 "" H 3650 3050 50  0001 C CNN
+	1    3650 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:GND #GND02
+U 1 1 5C87F182
+P 5900 1850
+F 0 "#GND02" H 5500 1650 70  0000 L BNN
+F 1 "GND" H 5800 1750 70  0000 L BNN
+F 2 "" H 5900 1850 60  0001 C CNN
+F 3 "" H 5900 1850 60  0001 C CNN
+	1    5900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:GND #GND01
+U 1 1 5C87F11E
+P 6400 1850
+F 0 "#GND01" H 6200 1600 70  0000 L BNN
+F 1 "GND" H 6300 1750 70  0000 L BNN
+F 2 "" H 6400 1850 60  0001 C CNN
+F 3 "" H 6400 1850 60  0001 C CNN
+	1    6400 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:GND #GND03
+U 1 1 5C87F1E6
+P 6900 2950
+F 0 "#GND03" H 7050 3050 70  0000 L BNN
+F 1 "GND" H 6800 2850 70  0000 L BNN
+F 2 "" H 6900 2950 60  0001 C CNN
+F 3 "" H 6900 2950 60  0001 C CNN
+	1    6900 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:R-4ms-passives R3
+U 1 1 5E335039
+P 3700 4850
+F 0 "R3" H 3770 4896 50  0000 L CNN
+F 1 "10k" H 3770 4805 50  0000 L CNN
+F 2 "4ms_Resistor:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3630 4850 50  0001 C CNN
+F 3 "" H 3700 4850 50  0001 C CNN
+	1    3700 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:R-US_0309_12 R1
+U 1 1 5C87F5CE
+P 2500 3150
+F 0 "R1" H 2350 3209 70  0000 L BNN
+F 1 "220" H 2350 3020 70  0000 L BNN
+F 2 "4ms_Resistor:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 2490 2940 65  0001 L TNN
+F 3 "" H 2500 3150 50  0001 C CNN
+	1    2500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:R-US_0309_12 R2
+U 1 1 5C87F696
+P 4400 3350
+F 0 "R2" H 4250 3409 70  0000 L BNN
+F 1 "470" H 4250 3220 70  0000 L BNN
+F 2 "4ms_Resistor:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 4390 3140 65  0001 L TNN
+F 3 "" H 4400 3350 50  0001 C CNN
+	1    4400 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L midi2dmx:1N4148DO35-7 D1
+U 1 1 5C87EFF2
+P 2800 3450
+F 0 "D1" H 2900 3469 70  0000 L BNN
+F 1 "1N4148DO35-7" H 2900 3359 70  0000 L BNN
+F 2 "midi2dmx:DO35-7" H 2790 3240 65  0001 L TNN
+F 3 "" H 2800 3450 50  0001 C CNN
+	1    2800 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L midi2dmx-rescue:Conn_01x02-4ms-headers J3
+U 1 1 5E32E439
+P 4200 4750
+F 0 "J3" H 4280 4742 50  0000 L CNN
+F 1 "button" H 4280 4651 50  0000 L CNN
+F 2 "4ms_Connector:Pins_1x02_2.54mm_TH" H 4200 4750 50  0001 C CNN
+F 3 "~" H 4200 4750 50  0001 C CNN
+	1    4200 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:C-US025-024X044 C2
+U 1 1 5C87EF2A
+P 3650 2750
+F 0 "C2" H 3690 2774 70  0000 L BNN
+F 1 "0.1" H 3689 2585 70  0000 L BNN
+F 2 "midi2dmx:C025-024X044" H 3640 2540 65  0001 L TNN
+F 3 "" H 3650 2750 50  0001 C CNN
+	1    3650 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:C-US025-024X044 C1
+U 1 1 5C87EE62
+P 5700 1350
+F 0 "C1" H 5740 1375 70  0000 L BNN
+F 1 "0.1" H 5740 1185 70  0000 L BNN
+F 2 "midi2dmx:C025-024X044" H 5690 1140 65  0001 L TNN
+F 3 "" H 5700 1350 50  0001 C CNN
+	1    5700 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L midi2dmx-rescue:Conn_01x03-4ms-headers J2
+U 1 1 5E324440
+P 4100 4250
+F 0 "J2" H 4018 3925 50  0000 C CNN
+F 1 "an 0-3" H 4018 4016 50  0000 C CNN
+F 2 "4ms_Connector:Pins_1x03_2.54mm_TH" H 4100 4250 50  0001 C CNN
+F 3 "" H 4100 4250 50  0001 C CNN
+	1    4100 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L midi2dmx-rescue:Conn_01x05-4ms-headers J4
+U 1 1 5E3526A3
+P 7475 4525
+F 0 "J4" H 7555 4567 50  0000 L CNN
+F 1 "i2c" H 7555 4476 50  0000 L CNN
+F 2 "4ms_Connector:Pins_1x05_2.54mm_TH" H 7475 4525 50  0001 C CNN
+F 3 "~" H 7475 4525 50  0001 C CNN
+	1    7475 4525
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:Conn_01x06-4ms-headers J1
+U 1 1 5E201C2B
+P 7800 3350
+F 0 "J1" H 7880 3342 50  0000 L CNN
+F 1 "pwr_gnd" H 7880 3251 50  0000 L CNN
+F 2 "4ms_Connector:Pins_1x06_2.54mm_TH_SWD" H 7800 3350 50  0001 C CNN
+F 3 "" H 7800 3350 50  0001 C CNN
+	1    7800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:NC3FBH2 X1
+U 1 1 5C87FC0E
+P 7300 1550
+F 0 "X1" H 7100 1750 70  0000 L BNN
+F 1 "NC3FBH2" H 7100 1250 70  0000 L BNN
+F 2 "midi2dmx:NC3FBH2" H 7100 1250 70  0001 L BNN
+F 3 "" H 7300 1550 50  0001 C CNN
+	1    7300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx-rescue:6N138-Isolator U1
+U 1 1 5C8866B4
+P 3300 3450
+F 0 "U1" H 3300 3917 50  0000 C CNN
+F 1 "6N138" H 3300 3826 50  0000 C CNN
+F 2 "4ms_Package_DIP:DIP-8pin_TH" H 3590 3150 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub/Collateral/HCPL2731-D.pdf" H 3590 3150 50  0001 C CNN
+	1    3300 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:MAX485DIL U$2
+U 1 1 5C87F826
+P 4800 1650
+F 0 "U$2" H 4400 1950 70  0000 L BNN
+F 1 "MAX485DIL" H 4400 1350 70  0000 L BNN
+F 2 "4ms_Package_DIP:DIP-8pin_TH" H 4790 1440 65  0001 L TNN
+F 3 "" H 4800 1650 50  0001 C CNN
+	1    4800 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L midi2dmx:MAB5SH X2
+U 1 1 5C87FCD6
+P 1900 3950
+F 0 "X2" H 1500 4375 70  0000 L BNN
+F 1 "MAB5SH" H 1900 4375 70  0000 L BNN
+F 2 "midi2dmx:MAB5SH" H 1900 4375 70  0001 L BNN
+F 3 "" H 1900 3950 50  0001 C CNN
+	1    1900 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L midi2dmx:TEENSY_3.1-3.2_ALL_PINS U$1
+U 1 1 5C87F75E
+P 5800 3650
+F 0 "U$1" H 5581 5000 50  0000 L BNN
+F 1 "TEENSY_3.1-3.2_ALL_PINS" H 5690 2150 50  0000 L BNN
+F 2 "midi2dmx:TEENSY_3.0-3.2&LC_ALL_PINS" H 5790 3440 65  0001 L TNN
+F 3 "" H 5800 3650 50  0001 C CNN
+	1    5800 3650
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
