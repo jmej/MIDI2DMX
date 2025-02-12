@@ -6,12 +6,29 @@ extern void led_color(unsigned int num, unsigned char red, unsigned char green, 
 extern void led_channel(unsigned int num, unsigned int val);
 #define OFF    0x000000
 #define RED    0xFF0000
-#define GREEN  0x00FF00
-#define BLUE   0x0000FF
+#define ORANGE 0xFF8000
 #define YELLOW 0xFFFF00
+#define LIGHTGREEN  0x80FF00
+#define GREEN  0x00FF00
+#define CYAN  0x00FF80
+#define BLUE   0x0000FF
+
 #define PINK   0xFF1088
 #define ORANGE 0xE05800
 #define WHITE  0xFFFFFF
+
+// c: 255, 0, 0 #ff0000 red
+// c#: 255, 128, 0 #ff8000 orange
+// d: 255, 255, 0 #ffff00 yellow
+// d#: 128, 255, 0 #80ff00 light green
+// e: 0, 255, 0 #00ff00 green
+// f: 0, 255, 128 #00ff80 cyan
+// f# 0, 255, 255 #00ffff light blue
+// g: 0, 128, 255 #0080ff blue
+// g# 0, 0, 255 #0000ff dark blue
+// a: 128, 0, 255 #8000ff purple
+// a# 255, 0, 255 #ff00ff pink
+// b: 255, 0, 128 #ff0080 magenta
 
 MIDI_CREATE_INSTANCE(HardwareSerial, Serial2, MIDI);
 
