@@ -2,9 +2,10 @@
  requires https://github.com/earlephilhower/arduino-pico (LGPL)
  and https://github.com/jostlowe/Pico-DMX (BSD-3)
  
- Simplified demo of usb midi in and out of a raspberry pi pico (tested on an RP2040)
+ PICO DMX lib: SPDX-License-Identifier: BSD-3-Clause
 
- 
+ MIDI2DMX code for rp2040
+
  Adafruit invests time and resources providing this open source code,
  please support Adafruit and open-source hardware by purchasing
  products from Adafruit!
@@ -24,6 +25,7 @@
 #include <Arduino.h>
 #include <Adafruit_TinyUSB.h>
 #include <MIDI.h>
+#include <DmxOutput.h>
 
 const unsigned int colors[12][3]={
  {254, 0, 0}, //red
@@ -61,11 +63,14 @@ int vel = 64;
 int hue = 0;
 bool sustain = 0;
 
- uint universe_length;
+// Create a universe that we want to send.
+// The universe must be maximum 512 bytes + 1 byte of start code
+#define universe_length 512
  uint8_t universe[universe_length + 1]; 
 // USB MIDI object
 Adafruit_USBD_MIDI usb_midi;
-DmxOutput myDmxOutput;
+// Declare an instance of the DMX Output
+DmxOutput dmx;
 
 // Create a new instance of the Arduino MIDI Library,
 // and attach usb_midi as the transport.
@@ -88,7 +93,8 @@ void setup() {
   // Initialize MIDI, and listen to all MIDI channels
   // This will also call usb_midi's begin()
   MIDI.begin(MIDI_CHANNEL_OMNI);
-  myDmxOutput.begin(1);
+  // Start the DMX Output on GPIO-pin 0
+  dmx.begin(0);
   //test purple on a light setup with channel 1: red, channel 2: green, channel 3: blue
   universe[1] = 255;
   universe[2] = 0;
@@ -118,6 +124,8 @@ void loop() {
   if (!TinyUSBDevice.mounted()) {
     return;
   }
+ // usbMIDI.read(); // USB MIDI receive
+  MIDI.read();
 
   if(sustain){
     universe[1] = colors[hue][0];
@@ -127,26 +135,26 @@ void loop() {
   }else{
     universe[7] = vel;
   }
-  myDmxOutput.write(universe, universe_length + 1);
-  usbMIDI.read(); // USB MIDI receive
-  MIDI.read();
+  dmx.write(universe, universe_length + 1);
+  while (dmx.busy())
+  {
+        /* Do nothing while the DMX frame transmits */
+  }
 
   
-  val = analogRead(sensorPin);
-  val = constrain(val, 100, 750);
-  val = map(val, 100, 750, 0, 127);
+  // val = analogRead(sensorPin);
+  // val = constrain(val, 100, 750);
+  // val = map(val, 100, 750, 0, 127);
   //Serial.println(val);
-  MIDI.sendControlChange(7, val, 1);
+ // MIDI.sendControlChange(7, val, 1);
 
 
 
-
-  // read any new MIDI messages
-  MIDI.read();
+  delay(1);
 }
 
 void handleNoteOn(byte channel, byte pitch, byte velocity) {
-  hue = note % 12;
+  hue = pitch % 12;
   vel = velocity;
   sustain = 1;
   Serial.println("got a midi note");
