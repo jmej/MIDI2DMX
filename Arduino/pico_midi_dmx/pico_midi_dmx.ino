@@ -129,8 +129,8 @@ void loop() {
 
   if(sustain){
     universe[1] = colors[hue][0];
-    universe[2] = colors[hue][0];
-    universe[3] = colors[hue][0];
+    universe[2] = colors[hue][1];
+    universe[3] = colors[hue][2];
     universe[7] = vel;
   }else{
     universe[7] = vel;
