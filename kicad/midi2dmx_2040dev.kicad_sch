@@ -1754,7 +1754,7 @@
     (property "Value" "0.1" (at 228.981 85.344 0)
       (effects (font (size 1.778 1.778)) (justify left bottom))
     )
-    (property "Footprint" "midi2dmx:C025-024X044" (at 230.124 86.614 0)
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" (at 230.124 86.614 0)
       (effects (font (size 1.651 1.651)) (justify left top) hide)
     )
     (property "Datasheet" "" (at 224.79 86.36 0)
@@ -1780,7 +1780,7 @@
     (property "Value" "0.1" (at 173.7106 126.111 0)
       (effects (font (size 1.778 1.778)) (justify left bottom))
     )
-    (property "Footprint" "midi2dmx:C025-024X044" (at 172.466 127.254 0)
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" (at 172.466 127.254 0)
       (effects (font (size 1.651 1.651)) (justify left top) hide)
     )
     (property "Datasheet" "" (at 172.72 121.92 0)
@@ -2100,7 +2100,7 @@
   (symbol (lib_id "power:GND") (at 242.57 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 23a459ee-8553-40bb-b61c-121952793396)
-    (property "Reference" "#PWR?" (at 242.57 102.87 0)
+    (property "Reference" "#PWR0103" (at 242.57 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 242.697 100.9142 0)
@@ -2116,7 +2116,7 @@
     (instances
       (project "midi2dmx_2040dev"
         (path "/d6e58c98-857b-428d-a0e1-bf9c11e4da68"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -2175,7 +2175,7 @@
   (symbol (lib_id "power:GND") (at 171.45 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5dcfa75f-6886-4b11-81fa-70126764836e)
-    (property "Reference" "#PWR?" (at 171.45 151.13 0)
+    (property "Reference" "#PWR0102" (at 171.45 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 171.577 149.1742 0)
@@ -2191,7 +2191,7 @@
     (instances
       (project "midi2dmx_2040dev"
         (path "/d6e58c98-857b-428d-a0e1-bf9c11e4da68"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
@@ -2225,7 +2225,7 @@
   (symbol (lib_id "power:GND") (at 229.87 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8cf45e40-28ac-4afc-bc58-5db330fbb58d)
-    (property "Reference" "#PWR?" (at 229.87 102.87 0)
+    (property "Reference" "#PWR0104" (at 229.87 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 229.997 100.9142 0)
@@ -2241,7 +2241,7 @@
     (instances
       (project "midi2dmx_2040dev"
         (path "/d6e58c98-857b-428d-a0e1-bf9c11e4da68"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0104") (unit 1)
         )
       )
     )

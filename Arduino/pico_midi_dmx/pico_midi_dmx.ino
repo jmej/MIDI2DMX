@@ -145,7 +145,6 @@ void loop() {
         /* Do nothing while the DMX frame transmits */
   }
 
-  
   // val = analogRead(sensorPin);
   // val = constrain(val, 100, 750);
   // val = map(val, 100, 750, 0, 127);
