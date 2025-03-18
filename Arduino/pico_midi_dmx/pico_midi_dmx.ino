@@ -75,7 +75,7 @@ DmxOutput dmx;
 // Create a new instance of the Arduino MIDI Library,
 // and attach usb_midi as the transport.
 MIDI_CREATE_INSTANCE(Adafruit_USBD_MIDI, usb_midi, MIDI);
-
+MIDI_CREATE_INSTANCE(HardwareSerial, Serial1, HWMIDI);
 
 
 void setup() {
@@ -93,6 +93,7 @@ void setup() {
   // Initialize MIDI, and listen to all MIDI channels
   // This will also call usb_midi's begin()
   MIDI.begin(MIDI_CHANNEL_OMNI);
+  HWMIDI.begin(MIDI_CHANNEL_OMNI);
   // Start the DMX Output on GPIO-pin 0
   dmx.begin(0);
   //test purple on a light setup with channel 1: red, channel 2: green, channel 3: blue
@@ -109,9 +110,11 @@ void setup() {
   // Attach the handleNoteOn function to the MIDI Library. It will
   // be called whenever the Bluefruit receives MIDI Note On messages.
   MIDI.setHandleNoteOn(handleNoteOn);
+  HWMIDI.setHandleNoteOn(handleNoteOn);
 
   // Do the same for MIDI Note Off messages.
   MIDI.setHandleNoteOff(handleNoteOff);
+  HWMIDI.setHandleNoteOff(handleNoteOff);
 }
 
 void loop() {
@@ -126,6 +129,7 @@ void loop() {
   }
  // usbMIDI.read(); // USB MIDI receive
   MIDI.read();
+  HWMIDI.read();
 
   if(sustain){
     universe[1] = colors[hue][0];
@@ -171,7 +175,7 @@ void handleNoteOn(byte channel, byte pitch, byte velocity) {
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity) {
-  vel = velocity;
+  vel = 0;
   sustain = 0;
   // Log when a note is released.
   Serial.print("Note off: channel = ");
